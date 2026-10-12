@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink-950: #07070b;
+  --color-ink-900: #0c0c12;
+  --color-ink-850: #111118;
+  --color-ink-800: #16161f;
+  --color-ink-700: #1f1f2b;
+  --color-ink-600: #2a2a38;
+  --color-ink-500: #3a3a4c;
+  --color-ink-400: #6b6b80;
+  --color-ink-300: #9a9ab0;
+  --color-ink-200: #c9c9d6;
+  --color-ink-100: #ececf3;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-accent: #22d3ee;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", "Inter", sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: var(--color-ink-950);
+  color: var(--color-ink-100);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgb(139 92 246 / 0.45);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-ink-600) transparent;
+}
+
+.glow-ring {
+  box-shadow:
+    0 0 0 1px rgb(139 92 246 / 0.35),
+    0 10px 40px -10px rgb(139 92 246 / 0.55);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -200% 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.08), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}

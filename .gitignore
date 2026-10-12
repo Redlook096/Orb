@@ -1,0 +1,15 @@
+node_modules
+.next
+out
+.remotion-bundle
+storage/*
+!storage/.gitkeep
+models/*
+!models/.gitkeep
+*.log
+.env
+.env.local
+next-env.d.ts
+*.tsbuildinfo
+__pycache__
+.DS_Store

@@ -1,0 +1,7 @@
+node_modules
+.next
+.remotion-bundle
+storage
+models/*.onnx
+models/*.bin
+.git
